@@ -40,3 +40,8 @@ Para linkar caminhos de arquivos, devemos usar o protocolo filesystem, dentro do
 ```
 <variavelBrowserWindow>.loadURL(`file://${__dirname}/app/index.html`)
 ```
+
+Toda a aplicação Electron trabalha com dois fluxos:  
+Um fluxo que controla o ciclo de vida da aplicação e outro que gerencia janelas.  
+O fluxo que gerencia aplicação é baseado em node e, seu console.log é exibido no console do SO.
+Os fluxos de janelas são carregados via import de telas. Seu console.log é exibido no devtools da aplicação.
